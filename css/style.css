@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.main-content {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--dark-cyan);
+    background-image: url('../imagenes/bg-pattern-bottom.svg'), url('../imagenes/bg-pattern-top.svg');
+    background-repeat: no-repeat, no-repeat;
+    /* La posición de la imagen del fondo se calcula automáticamente con las dimensiones del viewport
+    La posición de la imagen superrior, se cálcula considerando las dimensiones de la imagen y la mitad del viewport 
+    En embos casos, se fija la imagen a al centro del view port */
+    background-position: 50vw 50vh, calc(50vw - 80rem) calc(50vh - 80rem);
+    background-size: 80rem 80rem, 80rem 80rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-wrapper {
+    border-radius: 1rem;
+    width: 30rem;
+    height: 35rem;
+    overflow: hidden;
+}
+
+.top-card {
+    height: 35%;
+    background-image: url('../imagenes/bg-pattern-card.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.card-picture {
+    background-image: url('../imagenes/image-victor.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 7rem;
+}
+
+.body-card {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.card-user {
+    width: 100%;
+    height: 40%;
+}
+
+.card-user__data {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.card-user__data--name {
+    height: 100%;
+    display: flex;
+    margin-right: 1rem;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 2rem;
+    font-weight: 1000;
+}
+
+.card-user__country {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.card-data {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-stadistics {
+    width: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-stadistics__count {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+.card-stadistics__type {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
